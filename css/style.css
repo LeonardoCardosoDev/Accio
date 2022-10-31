@@ -34,13 +34,8 @@ nav{
     font-size: 1.5vw;
 }
 
-.buttonLogin{
-    font-family: 'Roboto',sans-serif;
-    font-weight: bold 700;
-    font-size: 1vw;
-}
 /*Letter*/
-.containerLetter{
+.container-letter{
    height: 80vh;
    width: 100vw;
    
@@ -50,7 +45,7 @@ nav{
    
 }
 
-.containerLetter .letter{
+.container-letter .letter{
     height: 50vh;
     width: 50vw;
    
@@ -61,7 +56,7 @@ nav{
     
 }
 
-.containerLetter .letter img{
+.container-letter .letter img{
     width: auto;
     height: 50vh;
     transform: translateY(0px);
@@ -78,4 +73,73 @@ nav{
     100%{
         transform: translateY(0px)
     }
+}
+/*Efect button*/
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+
+    font-family: 'Roboto', sans-serif;
+        font-weight: bold 700;
+        font-size: 1vw;
+   
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: #fff;
+    background: linear-gradient(#fff 0%, #fff 100%);
+    text-align: center;
+    color: black;
+}
+
+.btn:hover {
+    color: #fff;
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn:before,
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #fff;
+    box-shadow:
+        -1px -1px 5px 0px #fff,
+        7px 7px 20px 0px #0003,
+        4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.btn:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
 }
