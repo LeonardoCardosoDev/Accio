@@ -11,9 +11,10 @@
     box-sizing: border-box;
     color: inherit;
 }
+
 /*NavBar*/
 header{
-    height: 20%;
+    height: 15%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -39,5 +40,42 @@ nav{
     font-size: 1vw;
 }
 /*Letter*/
+.containerLetter{
+   height: 80vh;
+   width: 100vw;
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
 
+.containerLetter .letter{
+    height: 50vh;
+    width: 50vw;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    
+}
+
+.containerLetter .letter img{
+    width: auto;
+    height: 50vh;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+}
+/*Letter Efect*/
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px)
+    }
+}
