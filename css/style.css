@@ -1,5 +1,8 @@
+/*Imports*/
 @import "star.css";
-
+@import url('http://fonts.cdnfonts.com/css/harry-potter');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/*Resetando Padrões*/
 * {
     margin: 0;
     padding: 0;
@@ -8,4 +11,33 @@
     box-sizing: border-box;
     color: inherit;
 }
+/*NavBar*/
+header{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+   
+    width: 80%;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 1.5vw;
+}
+
+.buttonLogin{
+    font-family: 'Roboto',sans-serif;
+    font-weight: bold 700;
+    font-size: 1vw;
+}
+/*Letter*/
+
 
