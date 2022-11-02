@@ -52,16 +52,28 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
 }
 
 .container-letter .letter img{
     width: auto;
     height: 50vh;
+    display: block;
+    cursor: pointer;
     transform: translateY(0px);
     animation: float 5s ease-in-out infinite;
 }
+/*segunda carta*/
+#imgCarta2{
+    cursor: pointer; 
+    display: none;
+    width: auto;
+    height: 43vh;
+    animation: float none;
+    animation: fadeIn 2s ease-in-out;
+    align-self: center;
+    justify-self: center;
+}
+
 /*Letter Efect*/
 @keyframes float{
     0%{
@@ -72,6 +84,16 @@ nav{
     }
     100%{
         transform: translateY(0px)
+    }
+}
+/*Letter Efect Second*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 /*Efect button*/
