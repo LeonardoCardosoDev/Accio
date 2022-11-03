@@ -76,8 +76,8 @@ nav{
 }
 /*Letter Open*/
 .modal {
-    width: 100vw;
-    height: 80vh;
+    width: 25vw;
+    height: 70vh;
    
     position: absolute;
     top: 50%;
@@ -91,7 +91,7 @@ nav{
 
 .container-modal {
     width: 25vw;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +103,7 @@ nav{
     
     border-radius: 10px;
     margin: auto;
-
+    
     animation: fadeIn 3s ease-in-out;
     
 }
@@ -112,9 +112,9 @@ nav{
     width: 20vw;
     height: auto;
     font-family: 'Cedarville Cursive', cursive;
-        font-size: 0.75vw;
+        font-size: 0.78vw;
         color: black;
-        font-weight: 600;
+        font-weight: 700;
         text-align: center;
 }
 
