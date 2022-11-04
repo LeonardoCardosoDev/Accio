@@ -8,60 +8,63 @@
     <title>Cadastro</title>
 
     <script src="./js/funcoes.js"></script>
-
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="css/cadastro.css" />
   </head>
 
   <body>
-    <div class="banner">
-      <div class="alerta_erro">
-        <div class="card_erro" id="cardErro">
-          <span id="mensagem_erro"></span>
+    <nav class="containerMain">
+      <div class="main"></div>
+      <div class="banner">
+        <div class="alerta_erro">
+          <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+          </div>
         </div>
-      </div>
-      <div class="container tamanho-conteudo">
-        <div class="card medio">
-          <h2>Bem-vindo!</h2>
-          <div class="formulario">
-            <!--
+        <div class="container1 tamanho-conteudo">
+          <div class="card medio">
+            <h2>Bem-vindo!</h2>
+            <div class="formulario">
+              <!--
                          Para inserir mais um campo, copie uma das inputs abaixo.
                          Assim que inserir vá para o script abaixo.
                      -->
 
-            <span class="tipo_campo">Nome:</span>
-            <input id="nome_input" type="text" placeholder="Seu nome" />
+              <span class="tipo_campo">Nome:</span>
+              <input id="nome_input" type="text" placeholder="Seu nome" />
 
-            <span class="tipo_campo">Sobrenome:</span>
-            <input
-              id="sobre_nome_input"
-              type="text"
-              placeholder="Seu sobrenome" />
+              <span class="tipo_campo">Sobrenome:</span>
+              <input
+                id="sobre_nome_input"
+                type="text"
+                placeholder="Seu sobrenome" />
 
-            <span class="tipo_campo">E-mail:</span>
-            <input
-              id="email_input"
-              type="text"
-              placeholder="meuemail@provedor.com" />
+              <span class="tipo_campo">E-mail:</span>
+              <input
+                id="email_input"
+                type="text"
+                placeholder="meuemail@provedor.com" />
 
-            <span class="tipo_campo">Senha:</span>
-            <input id="senha_input" type="password" placeholder="******" />
+              <span class="tipo_campo">Senha:</span>
+              <input id="senha_input" type="password" placeholder="******" />
 
-            <span class="tipo_campo">Confirmação da Senha:</span>
-            <input
-              id="confirmacao_senha_input"
-              type="password"
-              placeholder="******" />
+              <span class="tipo_campo">Confirmação da Senha:</span>
+              <input
+                id="confirmacao_senha_input"
+                type="password"
+                placeholder="******" />
 
-            <button class="btn" onclick="cadastrar()">Cadastrar</button>
+              <button class="btn" onclick="cadastrar()">Cadastrar</button>
+              <div id="div_aguardar" class="loading-div">
+                <img src="./assets/circle-loading.gif" id="loading-gif" />
+              </div>
+
+              <div id="div_erros_login"></div>
+            </div>
           </div>
-          <div id="div_aguardar" class="loading-div">
-            <img src="./assets/circle-loading.gif" id="loading-gif" />
-          </div>
-
-          <div id="div_erros_login"></div>
         </div>
       </div>
-    </div>
+    </nav>
   </body>
 </html>
 

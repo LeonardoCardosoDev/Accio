@@ -1,0 +1,71 @@
+/*Imports*/
+@import "star.css";
+@import url('http://fonts.cdnfonts.com/css/harry-potter');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+/*Resetando Padrões*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+.containerMain{
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(0, #141132, #000000);
+    
+    font-family: 'Roboto', sans-serif;
+        font-weight: bold 700;
+        font-size: 1vw;
+        color: #fff;
+}
+
+.banner{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container1{
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card{
+    
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: #9090902a;
+    padding: 30px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 1px 0px #00000060;
+    width: 400px;
+       
+       
+}
+.formulario{
+    width: 30vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+       
+}
