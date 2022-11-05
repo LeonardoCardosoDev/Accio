@@ -30,33 +30,46 @@
                          Assim que inserir vá para o script abaixo.
                      -->
 
-              <span class="tipo_campo">Nome:</span>
-              <input id="nome_input" type="text" placeholder="Seu nome" />
+              <div class="label-float">
+                <input id="nome_input" type="text" placeholder="" required />
+                <label for="nome_input">Nome</label>
+              </div>
 
-              <span class="tipo_campo">Sobrenome:</span>
-              <input
-                id="sobre_nome_input"
-                type="text"
-                placeholder="Seu sobrenome" />
+              <div class="label-float">
+                <input
+                  id="sobre_nome_input"
+                  type="text"
+                  placeholder=""
+                  required />
+                <label for="sobre_nome_input">Sobrenome</label>
+              </div>
 
-              <span class="tipo_campo">E-mail:</span>
-              <input
-                id="email_input"
-                type="text"
-                placeholder="meuemail@provedor.com" />
+              <div class="label-float">
+                <input id="email_input" type="text" placeholder="" required />
+                <label for="email_input">Email</label>
+              </div>
 
-              <span class="tipo_campo">Senha:</span>
-              <input id="senha_input" type="password" placeholder="******" />
+              <div class="label-float">
+                <input
+                  id="senha_input"
+                  type="password"
+                  placeholder=""
+                  required />
+                <label for="senha_input">Senha</label>
+              </div>
 
-              <span class="tipo_campo">Confirmação da Senha:</span>
-              <input
-                id="confirmacao_senha_input"
-                type="password"
-                placeholder="******" />
+              <div class="label-float">
+                <input
+                  id="confirmacao_senha_input"
+                  type="password"
+                  placeholder=""
+                  required />
+                <label for="confirmacao_senha_input">Confirmar Senha</label>
+              </div>
 
               <button class="btn" onclick="cadastrar()">Cadastrar</button>
               <div id="div_aguardar" class="loading-div">
-                <img src="./assets/circle-loading.gif" id="loading-gif" />
+                <img src="assets/gif_loding.svg" id="loading-gif" />
               </div>
 
               <div id="div_erros_login"></div>

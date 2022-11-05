@@ -1,8 +1,9 @@
 /*Imports*/
 @import "star.css";
 @import url('http://fonts.cdnfonts.com/css/harry-potter');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('http://fonts.cdnfonts.com/css/harry-potter');
 
 /*Resetando Padrões*/
 * {
@@ -13,59 +14,168 @@
     box-sizing: border-box;
     color: inherit;
 }
+header {
+    height: 15vh;
+    width: 70vw;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
 
 .containerMain{
     width: 100vw;
     height: 100vh;
 
-    background: linear-gradient(0, #141132, #000000);
+    background-image: url(assets/img_cadastro.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     
-    font-family: 'Roboto', sans-serif;
-        font-weight: bold 700;
-        font-size: 1vw;
-        color: #fff;
+    
 }
 
 .banner{
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container1{
-    width: 60vw;
+    width: 100vw;
     height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+        justify-content: center;
     
 }
 
 .card{
     
-    height: 60vh;
+   width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   
-    background-color: #9090902a;
+    
+background-color: #ffffff3c;
     padding: 30px;
     border-radius: 4%;
     box-shadow: 3px 3px 1px 0px #00000060;
     width: 400px;
+
+    margin: auto;
        
        
 }
+h2{
+    font-family: 'Roboto', sans-serif;
+        font-weight: bold 700;
+        font-size: 1.3vw;
+}
 .formulario{
     width: 30vw;
-        height: 50vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
+
+        font-family: 'Roboto', sans-serif;
+            font-weight: bold 700;
+            font-size: 1vw;
+            color: #000000;
+            
+           
        
+}
+.label-float input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 1vw;
+    transition: all .3s ease-in-out;
+    border-radius: 0;
+
+    font-family: 'Roboto', sans-serif;
+        font-weight: bold 700;
+        font-size: 1vw;
+        color: #000000;
+
+}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.label-float input:focus {
+    border-bottom: 2px solid #000000;
+}
+
+.label-float label {
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+
+    font-family: 'Roboto', sans-serif;
+        font-weight: bold 700;
+        font-size: 1vw;
+        color: #000000;
+}
+
+.label-float input:focus+label,
+.label-float input:valid+label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #000000;
+}
+
+button {
+    background-color: transparent;
+    border-color: #000000;
+    color: #000000;
+    padding: 7px;
+    
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-in-out;
+
+    font-family: 'Roboto', sans-serif;
+        font-weight: bold 700;
+
+}
+
+button:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.loading-div{
+width: auto;
+height: auto;
+display: none;
+}
+.loading-div img{
+    width: auto;
+    height: 10vh;
 }
