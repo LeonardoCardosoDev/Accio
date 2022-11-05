@@ -1,0 +1,195 @@
+/*Imports fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('http://fonts.cdnfonts.com/css/harry-potter');
+/*Resetando padrões*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+section{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #150F4A;
+}
+/*Container com Imagem*/
+.cont-first{
+    background-color: #150F4A;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont-img{
+    width: 50vw;
+    height: auto;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+.cont-img img{
+    width: auto;
+    height: 40vh;    
+}
+/*Container formulario*/
+.cont-second{
+    background-color: #fff;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    justify-content: center;
+    
+}
+
+.container{
+    width: auto;
+    height: 80vh;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+/*titulo*/
+.cont-title{
+    width: 40vw;
+    
+}
+.cont-title h2 {
+    font-family: 'Roboto', sans-serif;
+   
+    color: #32269E;
+    font-weight: 300;
+        font-size: 2.4vw;
+        
+        
+}
+.formulario{
+    width: 40vw;
+}
+/*Inputs*/
+.label-float input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 1vw;
+    transition: all .3s ease-in-out;
+    border-radius: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold 700;
+    font-size: 1vw;
+    color: #000000;
+
+}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.label-float input:focus {
+    border-bottom: 2px solid #32269E;
+}
+
+.label-float label {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold 700;
+    font-size: 1vw;
+    color: #000000;
+}
+
+.label-float input:focus+label,
+.label-float input:valid+label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #32269E;
+}
+/*Botões*/
+.container-btn{
+    width: 40vw;
+    height: 10vh;   
+    display: flex;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cont-btn .btn1 {
+    background-color: #32269E;
+    background-image: linear-gradient(315deg, #625aaa 0%, #625aaa 74%);
+    border: none;
+    z-index: 1;
+    margin-right: 50px;
+}
+.custom-btn {
+    width: 120px;
+    height: 35px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+.cont-btn .btn1:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: #32269E;
+    background-image: linear-gradient(315deg, #a39ecc 0%, #6767a6 74%);
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+
+.cont-btn .btn1:hover {
+    color: #fff;
+}
+
+.cont-btn .btn1:hover:after {
+    top: 0;
+    height: 100%;
+}
+
+.cont-btn .btn1:active {
+    top: 2px;
+}
