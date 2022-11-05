@@ -38,6 +38,10 @@ section{
     width: auto;
     height: 40vh;    
 }
+
+.first-img img{
+height: 65vh;
+}
 /*Container formulario*/
 .cont-second{
     background-color: #fff;
@@ -49,6 +53,12 @@ section{
     border-bottom-left-radius: 15px;
     justify-content: center;
     
+}
+.second-bord{
+border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .container{

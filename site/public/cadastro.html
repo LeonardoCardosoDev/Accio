@@ -9,21 +9,26 @@
 
     <script src="./js/funcoes.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="css/cadastro.css" />
+    <link rel="stylesheet" href="css/login.css" />
   </head>
 
   <body>
-    <nav class="containerMain">
-      <div class="main"></div>
-      <div class="banner">
-        <div class="alerta_erro">
-          <div class="card_erro" id="cardErro">
-            <span id="mensagem_erro"></span>
+    <section class="container-main">
+      <!-- Container formulario -->
+      <div class="cont-second second-bord">
+        <div class="banner">
+          <!-- Mensagem -->
+          <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+              <span id="mensagem_erro"></span>
+            </div>
           </div>
-        </div>
-        <div class="container1 tamanho-conteudo">
-          <div class="card medio">
-            <h2>Bem-vindo!</h2>
+
+          <div class="container">
+            <div class="cont-title">
+              <h2>Cadastro</h2>
+            </div>
+
             <div class="formulario">
               <!--
                          Para inserir mais um campo, copie uma das inputs abaixo.
@@ -66,18 +71,39 @@
                   required />
                 <label for="confirmacao_senha_input">Confirmar Senha</label>
               </div>
-
-              <button class="btn" onclick="cadastrar()">Cadastrar</button>
-              <div id="div_aguardar" class="loading-div">
-                <img src="assets/gif_loding.svg" id="loading-gif" />
+              <div class="container-btn">
+                <div class="cont-btn" style="width: 40vw">
+                  <button
+                    class="custom-btn btn2"
+                    onclick="cadastrar()"
+                    style="
+                      width: 40vw;
+                      background-image: linear-gradient(
+                        315deg,
+                        #32269e 0%,
+                        #d5d5e9 74%
+                      );
+                    ">
+                    Cadastrar
+                  </button>
+                </div>
               </div>
-
-              <div id="div_erros_login"></div>
             </div>
+            <div id="div_aguardar" class="loading-div">
+              <img src="assets/gif_loding.svg" id="loading-gif" />
+            </div>
+
+            <div id="div_erros_login"></div>
           </div>
         </div>
       </div>
-    </nav>
+      <!-- Container com Imagem -->
+      <div class="cont-first first-cadastro">
+        <div class="cont-img first-img">
+          <img src="assets/img_patrono.svg" alt="" />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
 
