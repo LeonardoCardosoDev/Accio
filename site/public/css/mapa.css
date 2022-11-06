@@ -1,0 +1,85 @@
+/* Import */
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+/* Resetando padrões */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+.section-map{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('assets/img_mapa_maroto.svg');
+        background-repeat: no-repeat;
+    
+        background-size:cover;
+
+        font-family: 'Cedarville Cursive', cursive;
+            font-size: 1.2vw;
+            color: #332c1f;
+            font-weight: 700;
+            text-align: center;
+      
+}
+
+.cont-frase1{
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+}
+
+.cont-frase2 {
+    width: 60vw;
+    display: none;
+    flex-direction: column;
+}
+.cont-frase3 {
+    width: 60vw;
+    display: none;
+    flex-direction: column;
+}
+.cont-frase4 {
+    width: 60vw;
+    display: none;
+    flex-direction: column;
+}
+.cont-frase5 {
+    width: 60vw;
+    display: none;
+    flex-direction: column;
+}
+.cont-frase6 {
+    width: 60vw;
+    display: none;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.padrao-efect {
+    animation: fadeIn 1s ease-in-out;
+}
+.cont-btn {
+    align-self: flex-end;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.cont-btn img {
+    width: auto;
+    height: 4vh;
+}

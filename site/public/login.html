@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Login</title>
-
+    <!-- Link para deixar o title da página com icone -->
+    <link rel="shortcut icon" href="assets/img_stars.svg" type="image/x-icon" />
+    <!-- link do javascript -->
     <script src="./js/funcoes.js"></script>
+    <!-- link do css -->
     <link rel="stylesheet" href="css/login.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
   </head>
@@ -84,7 +87,7 @@
     if (emailVar == "" || senhaVar == "") {
       cardErro.style.display = "flex";
       mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+        "(Vereficar se todos os campos estão preenchidos)";
       finalizarAguardar();
       return false;
     } else {
