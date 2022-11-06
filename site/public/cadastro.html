@@ -90,7 +90,7 @@
               </div>
             </div>
             <div id="div_aguardar" class="loading-div">
-              <img src="assets/gif_loding.svg" id="loading-gif" />
+              <img src="assets/gif_loding.gif" id="loading-gif" />
             </div>
 
             <div id="div_erros_login"></div>
@@ -99,6 +99,7 @@
       </div>
       <!-- Container com Imagem -->
       <div class="cont-first first-cadastro">
+        <div class="main-star"></div>
         <div class="cont-img first-img">
           <img src="assets/img_patrono.svg" alt="" />
         </div>
@@ -125,7 +126,7 @@
       senhaVar == "" ||
       confirmacaoSenhaVar == ""
     ) {
-      cardErro.style.display = "block";
+      cardErro.style.display = "flex";
       mensagem_erro.innerHTML =
         "(Mensagem de erro para todos os campos em branco)";
 
