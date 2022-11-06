@@ -133,7 +133,7 @@ border-top-left-radius: 0px;
 }
 .label-float input:focus+label,
 .label-float input:valid+label {
-   
+    font-size: 13px;
     margin-top: 0;
     color: #32269E;
 }
