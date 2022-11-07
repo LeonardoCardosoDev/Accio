@@ -20,5 +20,6 @@ function next5(params) {
   cont6.style.display = "flex";
 }
 function next6(params) {
-  cont6.style.display = "none";
+  sectionMap.style.display = "none";
+  sectionHog.style.display = "block";
 }

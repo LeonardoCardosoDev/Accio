@@ -1,5 +1,7 @@
 /* Import */
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('http://fonts.cdnfonts.com/css/harry-potter');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 /* Resetando padrões */
 * {
     margin: 0;
@@ -9,7 +11,7 @@
     box-sizing: border-box;
     color: inherit;
 }
-
+/* Section Mapa do Maroto */
 .section-map{
     width: 100vw;
     height: 100vh;
@@ -72,7 +74,7 @@
     }
 }
 .padrao-efect {
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1.8s ease-in-out;
 }
 .cont-btn {
     align-self: flex-end;
@@ -82,4 +84,80 @@
 .cont-btn img {
     width: auto;
     height: 4vh;
+}
+/* Section Hogwarts */
+.section-hog{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url('assets/img_fundohp.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        animation: fadeIn 1.5s ease-in-out;
+        display: none;
+}
+
+header{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    width: 85vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-family: 'Harry Potter', sans-serif;
+        font-size: 1.5vw;
+        color: #fff;
+}
+
+.logo2 img{
+    width: auto;
+    height: 10vh;
+}
+
+.title-hog{
+    
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        
+}
+.title-hog h2{
+font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 5vw;
+    color: #fff;
+}
+/*Botão continue*/
+.custom-btn h3{
+font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.5vw;
+    
+}
+
+.custom-btn{
+    margin-top: 60px;
+    padding: 9px 50px;
+    border: #fff 1px solid;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.custom-btn:hover{
+    background-color: #fff;
+    color: black;
+    transition: 1.5s ease-in-out;
 }
