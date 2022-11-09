@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt_br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -119,10 +119,11 @@
 
             sessionStorage.EMAIL_USUARIO = json.email;
             sessionStorage.NOME_USUARIO = json.nome;
+            sessionStorage.SOBRENOME_USUARIO = json.sobrenome;
             sessionStorage.ID_USUARIO = json.id;
 
             setTimeout(function () {
-              window.location = "index.html";
+              window.location = "perfil.html";
             }, 1000); // apenas para exibir o loading
           });
         } else {
