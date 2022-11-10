@@ -47,7 +47,15 @@
     background-color: #272447;
     border-radius: 43px;
     justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
+}
+.card-perfil img{
+width: auto;
+height: 15vh;
+
 }
 .desc-perfil{
     width: 30vw;
@@ -88,4 +96,17 @@
     font-weight: 400;
     font-size: 1.2vw;
     color: #FFFFFF;
+}
+/* Estilização Cards Interação */
+
+.card-inte{
+    width: 37vw;
+    height: 24vh;
+    border-radius: 26px;
+    background-color: #272447;
+   
+
+}
+.card1{
+    margin-bottom: 50px;
 }
