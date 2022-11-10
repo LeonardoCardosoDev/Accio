@@ -121,9 +121,17 @@
             sessionStorage.NOME_USUARIO = json.nome;
             sessionStorage.SOBRENOME_USUARIO = json.sobrenome;
             sessionStorage.ID_USUARIO = json.id;
+            sessionStorage.FKCASA_USUARIO = json.fk_casa;
 
             setTimeout(function () {
-              window.location = "perfil.html";
+              if (sessionStorage.FKCASA_USUARIO == 1) {
+                window.location = "perfil.html";
+              } else if (sessionStorage.FKCASA_USUARIO == 2) {
+                window.location = "./casas/grifinoria.html";
+              } else if (sessionStorage.FKCASA_USUARIO == 3) {
+                window.location = "./casas/sonserina.html";
+              } else {
+              }
             }, 1000); // apenas para exibir o loading
           });
         } else {
