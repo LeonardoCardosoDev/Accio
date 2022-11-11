@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accio</title>
     <script src="./js/funcoes.js"></script>
-    <script src="js/quiz.js"></script>
+
     <link rel="shortcut icon" href="assets/img_stars.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/perfil.css" />
     <script
@@ -45,7 +45,9 @@
       <!-- Container interações -->
       <div class="cont-perfil">
         <div class="card-inte card1"></div>
-        <div class="card-inte"></div>
+        <div class="card-inte">
+          <button onclick="alterar()">Socorro</button>
+        </div>
       </div>
     </section>
   </body>
@@ -53,4 +55,13 @@
 <script>
   b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
   c_usuario.innerHTML = sessionStorage.SOBRENOME_USUARIO;
+
+  function alterar(params) {
+    fetch("/usuarioModel/alterarFk", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
 </script>

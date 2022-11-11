@@ -42,9 +42,16 @@ function cadastrar(nome, sobrenome, email, senha) {
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);
 }
-
+function alterarFk(id) {
+  var instrucao = `
+        update usuario set fk_casa = 2 where id = ${id};
+    `;
+  console.log("Executando a instrução SQL: \n" + instrucao);
+  return database.executar(instrucao);
+}
 module.exports = {
   entrar,
   cadastrar,
   listar,
+  alterarFk,
 };
