@@ -1,4 +1,5 @@
 // sessão
+
 function validarSessao() {
   // aguardar();
 
@@ -6,6 +7,7 @@ function validarSessao() {
   var nome = sessionStorage.NOME_USUARIO;
   var sobrenome = sessionStorage.SOBRENOME_USUARIO;
   var fk_casa = sessionStorage.FKCASA_USUARIO;
+  var id = sessionStorage.ID_USUARIO;
 
   var b_usuario = document.getElementById("b_usuario");
 
@@ -53,3 +55,5 @@ function fecharModal() {
   var divModal = document.getElementById("div_modal");
   divModal.style.display = "none";
 }
+
+// Alterar fk

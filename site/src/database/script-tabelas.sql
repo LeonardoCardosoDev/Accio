@@ -13,15 +13,15 @@ create table casa(
 id int primary key auto_increment,
 nome_casa varchar(50)
 );
-create table pontoQuiz(
+
+create table ponto_quiz(
 id int primary key auto_increment,
 ponto int
 );
 
-create table acesso_quiz(
+create table frase(
 id int primary key auto_increment,
-ponto_quiz int,
-foreign key (ponto_quiz) references pontoQuiz(id)
+frase_user varchar(50)
 );
 
 create table usuario(
@@ -32,7 +32,9 @@ email varchar(50),
 senha varchar(50),
 fk_casa int,
 fk_ponto_quiz int,
-foreign key (fk_acesso) references acesso_quiz(id),
+fk_frase int,
+foreign key (fk_frase) references frase(id),
+foreign key (fk_ponto_quiz) references ponto_quiz(id),
 foreign key (fk_casa) references casa(id)
 );
 
