@@ -55,13 +55,21 @@
 <script>
   b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
   c_usuario.innerHTML = sessionStorage.SOBRENOME_USUARIO;
-
+  var id = sessionStorage.ID_USUARIO;
+  var fkGrifinoria = 2;
   function alterar(params) {
-    fetch("/usuarioModel/alterarFk", {
-      method: "POST",
+    fetch("/usuarios/alterar", {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        grifinoriaServer: fkGrifinoria,
+        idServer: id,
+      }),
     });
+    console.log("funcionei no perfil");
   }
 </script>
