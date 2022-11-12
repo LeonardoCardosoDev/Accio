@@ -120,7 +120,24 @@ height: 15vh;
     height: 24vh;
     border-radius: 26px;
     background-color: #272447;
+    overflow: hidden;
+    transition: 1s all ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
 }
+.card-inte img{
+width: auto;
+height: 18vh;
+
+
+}
+.card-inte:hover{
+    transform: scale(1.1);
+}
+
 .card1{
     margin-bottom: 50px;
 }
