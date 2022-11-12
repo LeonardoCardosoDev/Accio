@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accio</title>
-    <script src="./js/funcoes.js"></script>
-
     <link rel="shortcut icon" href="assets/img_stars.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="css/perfil.css" />
-    <script
-      src="https://kit.fontawesome.com/9f7414eb10.js"
-      crossorigin="anonymous"></script>
+    <title>Accio Lufa-lula</title>
+    <script src="../js/funcoes.js"></script>
+
+    <link rel="stylesheet" href="../css/perfil.css" />
+    <link rel="stylesheet" href="../css/lufa-lufa.css" />
   </head>
   <body>
     <div class="main"></div>
@@ -22,7 +20,7 @@
         <div class="container">
           <!-- Container card do perfil -->
           <div class="card-perfil">
-            <img src="assets/img_pomo.svg" alt="Imagem Pomo de Ouro" />
+            <img src="../assets/img_pomo.svg" alt="Imagem Pomo de Ouro" />
           </div>
           <div class="titles">
             <h2 id="b_usuario" class="title"></h2>
@@ -32,19 +30,11 @@
           <!-- Container card descrição do perfil -->
           <div class="desc-perfil">
             <div class="cont-card">
-              <div class="card-desc">
-                <div class="card-img">
-                  <img src="assets/img_casa_perfil.svg" alt="" />
-                </div>
-              </div>
+              <div class="card-desc"></div>
               <h3 class="sub-title">Casa</h3>
             </div>
             <div class="cont-card">
-              <div class="card-desc">
-                <div class="card-img">
-                  <img src="assets/img_pontos.svg" alt="" />
-                </div>
-              </div>
+              <div class="card-desc"></div>
               <h3 class="sub-title">Pontos</h3>
             </div>
           </div>
@@ -61,21 +51,4 @@
 <script>
   b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
   c_usuario.innerHTML = sessionStorage.SOBRENOME_USUARIO;
-  var id = sessionStorage.ID_USUARIO;
-  var fkGrifinoria = 2;
-  function alterar(params) {
-    fetch("/usuarios/alterar", {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        grifinoriaServer: fkGrifinoria,
-        idServer: id,
-      }),
-    });
-    console.log("funcionei no perfil");
-  }
 </script>

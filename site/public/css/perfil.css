@@ -72,9 +72,12 @@ height: 15vh;
     background-color: #272447;
     margin: auto;
     border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .titles{
-    width: 12vw;
+    width: 14vw;
     display: flex;
     margin-bottom: 77px;
     justify-content: space-evenly;
@@ -84,7 +87,7 @@ height: 15vh;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 1.5vw;
+    font-size: 1vw;
     text-align: center;
     color: #FFFFFF;
 }
@@ -96,6 +99,19 @@ height: 15vh;
     font-weight: 400;
     font-size: 1.2vw;
     color: #FFFFFF;
+}
+ .card-desc .card-img{
+    width: 10vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card-desç .card-img img{
+    width: auto;
+    height: auto;
+    
 }
 /* Estilização Cards Interação */
 
