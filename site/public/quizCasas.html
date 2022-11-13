@@ -36,16 +36,38 @@
       </div>
 
       <div class="questao" id="cont2">
-        <label for="qt1_Gr"></label>
-        <input type="radio" value="20" name="questao" id="qt1_Gr" />
-        <label for="qt1_Co"></label>
-        <input type="radio" value="40" name="questao" id="qt1_Co" />
-        <label for="qt1_So"></label>
-        <input type="radio" value="20" name="questao" id="qt1_So" />
-        <label for="qt1_Lu"></label>
-        <input type="radio" value="20" name="questao" id="qt1_Lu" />
+        <h2>O que prefere ser?</h2>
 
-        <button onclick="questao1()">Confirmar</button>
+        <label class="cont-quest">
+          <input type="radio" value="20" name="questao" id="qt1_Gr" />
+          <label for="qt1_Gr"><h4>Apreciado(a)</h4></label>
+        </label>
+
+        <label class="cont-quest">
+          <input type="radio" value="40" name="questao" id="qt1_Co" />
+          <label for="qt1_Co"><h4>Invejado(a)</h4></label>
+        </label>
+
+        <label class="cont-quest">
+          <input type="radio" value="20" name="questao" id="qt1_So" />
+          <label for="qt1_So"><h4>Temido(a)</h4></label>
+        </label>
+
+        <label class="cont-quest">
+          <input type="radio" value="20" name="questao" id="qt1_Lu" />
+          <label for="qt1_Lu"><h4>Confiável</h4></label>
+        </label>
+
+        <label class="cont-quest">
+          <input type="radio" value="20" name="questao" id="qt1_todas" />
+          <label for="qt1_todas"><h4>Elogiado(a)</h4></label>
+        </label>
+
+        <div class="cont-btn">
+          <button class="custom-btn btn1 font-btn" onclick="questao1()">
+            Confirmar
+          </button>
+        </div>
       </div>
     </section>
   </body>
