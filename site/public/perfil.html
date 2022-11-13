@@ -52,17 +52,23 @@
       </div>
       <!-- Container interações -->
       <div class="cont-perfil">
-        <div class="card-inte card1">
-          <img src="assets/img_colour.svg" alt="" />
-        </div>
-        <div class="card-inte">
-          <img src="assets/img_harry_potter.svg" alt="" />
-        </div>
+        <a href="quizCasas.html">
+          <div class="card-inte card1">
+            <img src="assets/img_colour.svg" alt="" />
+          </div>
+        </a>
+        <a href="">
+          <div class="card-inte">
+            <img src="assets/img_harry_potter.svg" alt="" />
+          </div>
+        </a>
       </div>
     </section>
   </body>
 </html>
 <script>
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+  c_usuario.innerHTML = sessionStorage.SOBRENOME_USUARIO;
   b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
   c_usuario.innerHTML = sessionStorage.SOBRENOME_USUARIO;
   var id = sessionStorage.ID_USUARIO;

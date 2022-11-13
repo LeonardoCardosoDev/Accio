@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accio</title>
+    <script src="./js/funcoes.js"></script>
+    <script src="js/quizCasas.js"></script>
+
+    <link rel="shortcut icon" href="assets/img_stars.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/perfil.css" />
+    <link rel="stylesheet" href="css/quizCasas.css" />
+    <script
+      src="https://kit.fontawesome.com/9f7414eb10.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="main"></div>
+
+    <section class="section-cont">
+      <div class="start" id="cont1">
+        <div class="title">
+          <div>
+            <h2>
+              Responda as perguntas a seguir e <br />descubra a casa que
+              pertence
+            </h2>
+          </div>
+          <div><h3>Vamos lá?</h3></div>
+        </div>
+
+        <div class="cont-btn">
+          <button class="custom-btn btn1" onclick="next()">Continuar</button>
+        </div>
+      </div>
+
+      <div class="questao" id="cont2">
+        <label for="qt1_Gr"></label>
+        <input type="radio" value="20" name="questao" id="qt1_Gr" />
+        <label for="qt1_Co"></label>
+        <input type="radio" value="40" name="questao" id="qt1_Co" />
+        <label for="qt1_So"></label>
+        <input type="radio" value="20" name="questao" id="qt1_So" />
+        <label for="qt1_Lu"></label>
+        <input type="radio" value="20" name="questao" id="qt1_Lu" />
+
+        <button onclick="questao1()">Confirmar</button>
+      </div>
+    </section>
+  </body>
+</html>
+<script>
+  var grifinoria = [];
+  var sonserina = [];
+  var corvinal = [];
+  var lufalufa = [];
+
+  function questao1(params) {
+    var qt = document.getElementsByName("questao");
+    for (var i = 0; i < qt.length; i++) {
+      if (qt[i].checked) {
+        if (qt[i] == document.getElementById("qt1_Gr")) {
+          grifinoria.push(Number(qt[i].value));
+          console.log(grifinoria);
+        }
+        if (qt[i] == document.getElementById("qt1_Co")) {
+          corvinal.push(Number(qt[i].value));
+          console.log(corvinal);
+        }
+        if (qt[i] == document.getElementById("qt1_So")) {
+          sonserina.push(Number(qt[i].value));
+          console.log(sonserina);
+        }
+        if (qt[i] == document.getElementById("qt1_Lu")) {
+          lufalufa.push(Number(qt[i].value));
+          console.log(lufalufa);
+        }
+      }
+    }
+  }
+</script>

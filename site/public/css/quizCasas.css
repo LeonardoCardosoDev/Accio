@@ -1,0 +1,85 @@
+.section-cont{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Start */
+.start{
+    display: flex;
+    width: 70vw;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.title {
+    display: flex;
+    width: 50vw;
+    height: auto;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 1.5vw;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    flex-direction: column;
+    
+}
+.title h2{
+    animation: fadeIn 5s ease-in-out;
+}
+.title h3 {
+    animation: fadeIn 8s ease-in-out;
+}
+/* Botões */
+.cont-btn {
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeIn 12s ease-in-out;
+}
+
+.cont-btn .btn1 {
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    border: #fff 1px solid;
+    
+}
+
+.custom-btn {
+    width: 15vw;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 1.2vw;
+    font-weight: 700;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    transition: 1s ease-in-out;
+    
+}
+.btn1:hover{
+    background: #fff;
+    color: #141132;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/* Questões */
+.questao{
+    display: none;
+    animation: fadeIn 3s ease-in-out;
+}
