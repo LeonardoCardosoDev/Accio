@@ -11,7 +11,7 @@
 
 /* Start */
 .start{
-    display: none;
+    display: flex;
     width: 70vw;
     height: 70vh;
     align-items: center;
@@ -35,14 +35,14 @@
     animation: fadeIn 5s ease-in-out;
 }
 .title h3 {
-    animation: fadeIn 8s ease-in-out;
+    animation: fadeIn 5s ease-in-out;
 }
 /* Botões */
 .cont-btn {
     display: flex;
     text-align: center;
     margin-top: 50px;
-    animation: fadeIn 12s ease-in-out;
+    animation: fadeIn 5s ease-in-out;
 }
 
 .cont-btn .btn1 {
@@ -68,6 +68,7 @@
     transition: 1s ease-in-out;
     
 }
+
 .btn1:hover{
     background: #fff;
     color: #141132;
@@ -84,24 +85,31 @@
 /* Questões */
 .questao{
     display: flex;
-    width: 60vw;
-    height: 60vh;
+    width: 65vw;
+    height: 70vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
     background-color: #272447;
     border-radius: 20px;
+    align-self: center;
+    justify-self: center;
 }
 .questao h2{
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight:bold 700;
+    margin-bottom: 20px;
 }
-
+.title-quiz{
+    font-size: 0.9vw;
+    text-align: center;
+    width: 50vw;
+}
 .questao .cont-quest{
-    width: 40vw;
+    width: 50vw;
     height: 5vh;
     margin-top: 10px;
     color: #fff;
@@ -113,10 +121,9 @@
    
 }
 .cont-quest label{
-    width: 50vw;
+    width: 60vw;
     height: 5vh;
     border-radius: 5px;
-    padding: auto;
     cursor: pointer;
     
     display: flex;
@@ -125,14 +132,16 @@
 }
 .cont-quest label h4{
     font-family: 'Roboto', sans-serif;
-        font-size: 1.1vw;
+        font-size: 1vw;
         font-weight: 500;
 }
 label:hover{
     background-color: #a8a2eda2;
+    transition: 0.7s ease-in-out;
 }
 .cont-quest input:checked + label {
     background-color: #7b72e4a2;
+    transition: ease-in-out;
 }
 
 .font-btn{
@@ -140,4 +149,25 @@ label:hover{
 }
 .questao .cont-quest input{
     display: none;
+}
+/*Questões None*/
+#cont2{
+    display: none;
+    animation: fadeIn 2s ease-in-out;
+}
+#cont3 {
+    display: none;
+    animation: fadeIn 2s ease-in-out;
+}
+#cont4 {
+    display: none;
+    animation: fadeIn 2s ease-in-out;
+}
+#cont5 {
+    display: none;
+    animation: fadeIn 2s ease-in-out;
+}
+#cont6 {
+    display: none;
+    animation: fadeIn 2s ease-in-out;
 }
