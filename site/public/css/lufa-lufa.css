@@ -13,3 +13,18 @@
 .card-inte {
     background-color: #473e24;
 }
+
+.card-img {
+    width: 10vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img img {
+    width: auto;
+    height: 150%;
+    margin-top: 15px;
+  
+}

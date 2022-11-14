@@ -1,0 +1,9 @@
+.card-img {
+    width: 10vw;
+    height: 10vh;
+}
+
+.card-img img {
+    width: auto;
+    height: 110%;
+}
