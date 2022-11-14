@@ -9,14 +9,10 @@ comandos para mysql - banco local - ambiente de desenvolvimento
 create database hogwarts;
 use hogwarts;
 
+
 create table casa(
 id int primary key auto_increment,
 nome_casa varchar(50)
-);
-
-create table ponto_quiz(
-id int primary key auto_increment,
-ponto int
 );
 
 create table frase(
@@ -30,11 +26,10 @@ nome varchar(50),
 sobrenome varchar(50),
 email varchar(50),
 senha varchar(50),
+ponto int,
 fk_casa int,
-fk_ponto_quiz int,
 fk_frase int,
 foreign key (fk_frase) references frase(id),
-foreign key (fk_ponto_quiz) references ponto_quiz(id),
 foreign key (fk_casa) references casa(id)
 );
 
