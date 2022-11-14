@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .card-img {
     width: 10vw;
     height: 10vh;
@@ -6,4 +8,90 @@
 .card-img img {
     width: auto;
     height: 110%;
+}
+/*Sobre a casa*/
+.card-inte {
+    height: 80vh;
+    margin: auto;
+    
+    
+    display: flex;
+    align-items: center;
+   
+    flex-direction: column;
+    
+}
+
+.title-frase{
+    color: #fff;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 1.3vw;
+    font-weight: 500;
+    
+    height: 5vh;
+    text-align: center;
+
+    justify-self:flex-start;
+    margin-bottom: 10px;
+    
+}
+.title-casa{
+    color: #fff;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 2vw;
+    font-weight: bold 700;
+}
+.text{
+    width: 33vw;
+    height: 30vh;
+
+    color: #fff;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 1vw;
+    font-weight: bold 700;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.text-2{
+color: #fff;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 1vw;
+    font-weight: bold 700;
+}
+
+.label-float input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+   
+    transition: all .3s ease-in-out;
+    border-radius: 0;
+
+    color: #fff;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 1vw;
+
+}
+.button{
+    width: 10vw;
+    height: 4vh;
+    border: #fff 2px solid;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Cedarville Cursive', cursive;
+        font-size: 1vw;
+        color: #fff;
+}
+.button h4{
+    margin: auto;
 }

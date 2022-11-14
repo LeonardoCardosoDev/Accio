@@ -20,9 +20,11 @@
       <!-- Container com Imagem -->
       <div class="cont-first">
         <div class="main-star"></div>
-        <div class="cont-img">
-          <img src="assets/img_coruja.svg" alt="" />
-        </div>
+        <a href="index.html">
+          <div class="cont-img">
+            <img src="assets/img_coruja.svg" alt="" />
+          </div>
+        </a>
       </div>
       <!-- Mensagem -->
       <div class="cont-second">
@@ -122,6 +124,8 @@
             sessionStorage.SOBRENOME_USUARIO = json.sobrenome;
             sessionStorage.ID_USUARIO = json.id;
             sessionStorage.FKCASA_USUARIO = json.fk_casa;
+            sessionStorage.PONTO_USUARIO = json.ponto;
+            sessionStorage.FKFRASE_USUARIO = json.fk_frase;
 
             setTimeout(function () {
               if (sessionStorage.FKCASA_USUARIO == 1) {

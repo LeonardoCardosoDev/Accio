@@ -8,6 +8,8 @@ function validarSessao() {
   var sobrenome = sessionStorage.SOBRENOME_USUARIO;
   var fk_casa = sessionStorage.FKCASA_USUARIO;
   var id = sessionStorage.ID_USUARIO;
+  var pontos = sessionStorage.PONTO_USUARIO;
+  var fk_frase = sessionStorage.FKFRASE_USUARIO;
 
   var b_usuario = document.getElementById("b_usuario");
 
