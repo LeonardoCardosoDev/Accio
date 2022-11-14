@@ -2,6 +2,16 @@ var grifinoria = [];
 var sonserina = [];
 var corvinal = [];
 var lufalufa = [];
+var vt_casas = [];
+
+var somaGrifinoria = 0;
+var somaSonserina = 0;
+var somaCorvinal = 0;
+var somaLufalufa = 0;
+
+var casaVencedora = 0;
+var indeceVencedora = 0;
+
 function next() {
   cont1.style.display = "none";
   cont2.style.display = "flex";
@@ -153,5 +163,50 @@ function next6(params) {
   }
 
   cont6.style.display = "none";
-  sectionHog.style.display = "block";
+
+  for (let index = 0; index < grifinoria.length; index++) {
+    somaGrifinoria += grifinoria[index];
+  }
+  for (let index = 0; index < sonserina.length; index++) {
+    somaSonserina += sonserina[index];
+  }
+  for (let index = 0; index < corvinal.length; index++) {
+    somaCorvinal += corvinal[index];
+  }
+  for (let index = 0; index < lufalufa.length; index++) {
+    somaLufalufa += lufalufa[index];
+  }
+
+  for (let index = 0; index < 4; index++) {
+    if (index == 0) {
+      vt_casas.push(somaGrifinoria);
+    }
+    if (index == 1) {
+      vt_casas.push(somaSonserina);
+    }
+    if (index == 2) {
+      vt_casas.push(somaCorvinal);
+    }
+    if (index == 3) {
+      vt_casas.push(somaLufalufa);
+    }
+  }
+  casaVencedora = Math.max.apply(null, vt_casas);
+  console.log(casaVencedora);
+
+  indeceVencedora = vt_casas.indexOf(casaVencedora);
+  console.log(indeceVencedora);
+
+  if (indeceVencedora == 0) {
+    Grifinoria.style.display = "flex";
+  }
+  if (indeceVencedora == 1) {
+    Sonserina.style.display = "flex";
+  }
+  if (indeceVencedora == 2) {
+    Corvinal.style.display = "flex";
+  }
+  if (indeceVencedora == 3) {
+    Lufalufa.style.display = "flex";
+  }
 }

@@ -42,9 +42,9 @@ function cadastrar(nome, sobrenome, email, senha) {
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);
 }
-function alterar(grifinoria, id) {
+function alterar(casa, id) {
   var instrucao = `
-        update usuario set fk_casa = ${grifinoria} where id = ${id};
+        update usuario set fk_casa = ${casa} where id = ${id};
     `;
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);

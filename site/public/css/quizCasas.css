@@ -171,3 +171,35 @@ label:hover{
     display: none;
     animation: fadeIn 2s ease-in-out;
 }
+/*Resultado Casa*/
+.casa{
+    display: none;
+    width: 65vw;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fadeIn 8s ease-in-out;
+    cursor: pointer;
+}
+.casa .img-casa{
+    width: 30vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.casa .img-casa img{
+    width: auto;
+    height: 35vh;
+}
+
+.title-casa{
+    text-align: center;
+    color: #fff;
+        border-radius: 5px;
+        font-family: 'Cedarville Cursive', cursive;
+        font-size: 2vw;
+        font-weight: 700;
+        margin-top: 20px;
+}

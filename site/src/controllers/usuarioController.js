@@ -96,12 +96,12 @@ function cadastrar(req, res) {
 
 function alterar(req, res) {
   // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-  var grifinoria = req.body.grifinoriaServer;
+  var casa = req.body.casaServer;
   var id = req.body.idServer;
 
   // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
   usuarioModel
-    .alterar(grifinoria, id)
+    .alterar(casa, id)
     .then(function (resultado) {
       res.json(resultado);
     })
