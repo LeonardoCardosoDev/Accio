@@ -23,7 +23,13 @@ function entrar(email, senha) {
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);
 }
-
+function retornar(id) {
+  var instrucao = `
+        SELECT * FROM usuario WHERE id = '${id}';
+    `;
+  console.log("Executando a instrução SQL: \n" + instrucao);
+  return database.executar(instrucao);
+}
 // Coloque os mesmos parâmetros aqui. Vá para a var instrucao
 function cadastrar(nome, sobrenome, email, senha) {
   console.log(
@@ -49,9 +55,19 @@ function alterar(casa, id) {
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);
 }
+function pontuar(pontos, id) {
+  var instrucao = `
+        update usuario set ponto = ${pontos} where id = ${id};
+    `;
+  console.log("Executando a instrução SQL: \n" + instrucao);
+  return database.executar(instrucao);
+}
+
 module.exports = {
   entrar,
   cadastrar,
   listar,
   alterar,
+  pontuar,
+  retornar,
 };

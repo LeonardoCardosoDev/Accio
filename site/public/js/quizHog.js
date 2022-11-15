@@ -10,6 +10,7 @@ function next2(params) {
   var qestao = document.getElementsByName("questao");
   for (var i = 0; i < qestao.length; i++) {
     if (qestao[i].checked) {
+      vt_acertos.push(Number(qestao[i].value));
     }
   }
 
@@ -20,6 +21,7 @@ function next3(params) {
   var qestao = document.getElementsByName("questao2");
   for (var i = 0; i < qestao.length; i++) {
     if (qestao[i].checked) {
+      vt_acertos.push(Number(qestao[i].value));
     }
   }
 
@@ -30,6 +32,7 @@ function next4(params) {
   var qestao = document.getElementsByName("questao3");
   for (var i = 0; i < qestao.length; i++) {
     if (qestao[i].checked) {
+      vt_acertos.push(Number(qestao[i].value));
     }
   }
 
@@ -40,6 +43,7 @@ function next5(params) {
   var qestao = document.getElementsByName("questao4");
   for (var i = 0; i < qestao.length; i++) {
     if (qestao[i].checked) {
+      vt_acertos.push(Number(qestao[i].value));
     }
   }
 
@@ -50,6 +54,20 @@ function next6(params) {
   var qestao = document.getElementsByName("questao5");
   for (var i = 0; i < qestao.length; i++) {
     if (qestao[i].checked) {
+      vt_acertos.push(Number(qestao[i].value));
     }
   }
+  for (let index = 0; index < vt_acertos.length; index++) {
+    somaAcerto += vt_acertos[index];
+  }
+  console.log(somaAcerto);
+  console.log(vt_acertos);
+
+  pontuacao_div.innerHTML = `${somaAcerto}`;
+
+  cont6.style.display = "none";
+  cont7.style.display = "flex";
+
+  console.log(id);
+  console.log(sessionStorage.FKCASA_USUARIO);
 }

@@ -95,3 +95,15 @@ color: #fff;
 .button h4{
     margin: auto;
 }
+.cont-card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    
+
+}
+.cont-card{
+    font-family: 'Roboto';
+    font-size: 1.5vw;
+    font-weight: bold 700;
+    text-align: center;
+}

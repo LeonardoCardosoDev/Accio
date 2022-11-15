@@ -141,3 +141,11 @@ height: 18vh;
 .card1{
     margin-bottom: 50px;
 }
+.cont-card{
+    font-family: 'Roboto';
+    font-size: 1.5vw;
+    font-weight: bold 700;
+    text-align: center;
+    color: #fff;
+
+}
