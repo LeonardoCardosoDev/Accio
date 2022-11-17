@@ -24,12 +24,18 @@ function validarSessao() {
   }
 }
 
+function limparSessaoCasas() {
+  // aguardar();
+  sessionStorage.clear();
+  // finalizarAguardar();
+  window.location = "../login.html";
+}
 function limparSessao() {
   // aguardar();
   sessionStorage.clear();
   // finalizarAguardar();
+  window.location = "login.html";
 }
-
 // carregamento (loading)
 function aguardar() {
   var divAguardar = document.getElementById("div_aguardar");
