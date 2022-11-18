@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&display=swap');
 
 .card-img {
     width: 10vw;
@@ -9,57 +10,65 @@
     width: auto;
     height: 110%;
 }
+
 /*Sobre a casa*/
 .card-inte {
     height: 80vh;
     margin: auto;
-    
-    
+
+
     display: flex;
     align-items: center;
-   
+
     flex-direction: column;
-    
+
 }
 
-.title-frase{
+.title-frase {
     color: #fff;
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Roboto Slab', serif;
     font-size: 1.3vw;
-    font-weight: 500;
-    
+    font-weight:  600;
+
     height: 5vh;
     text-align: center;
 
-    justify-self:flex-start;
+    justify-self: flex-start;
     margin-bottom: 10px;
-    
+
 }
-.title-casa{
+
+.title-casa {
     color: #fff;
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Roboto Slab', serif;
     font-size: 2vw;
-    font-weight: bold 700;
+    font-weight: bold 800;
 }
-.text{
-    width: 33vw;
+
+.text {
+    width: 32vw;
     height: 30vh;
 
     color: #fff;
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Roboto Slab', serif;
     font-size: 1vw;
-    font-weight: bold 700;
+    font-weight: 400;
 
-    text-align: center;
+    text-align: justify;
 
     margin-bottom: 30px;
     margin-top: 20px;
+    word-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.text-2{
-color: #fff;
-    font-family: 'Cedarville Cursive', cursive;
+
+.text-2 {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
     font-size: 1vw;
-    font-weight: bold 700;
+    font-weight: 400;
 }
 
 .label-float input {
@@ -71,7 +80,7 @@ color: #fff;
     background-color: transparent;
     outline: none;
     min-width: 180px;
-   
+
     transition: all .3s ease-in-out;
     border-radius: 0;
 
@@ -80,7 +89,8 @@ color: #fff;
     font-size: 1vw;
 
 }
-.button{
+
+.button {
     width: 10vw;
     height: 4vh;
     border: #fff 2px solid;
@@ -88,26 +98,31 @@ color: #fff;
     text-align: center;
     margin: auto;
     margin-top: 50px;
-    font-family: 'Cedarville Cursive', cursive;
-        font-size: 1vw;
-        color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1vw;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
-.button h4{
-    margin: auto;
-}
+
+
 .cont-card:hover {
     cursor: pointer;
     transform: scale(1.1);
-   
+
 
 }
-.cont-card{
+
+.cont-card {
     font-family: 'Roboto';
     font-size: 1.5vw;
     font-weight: bold 700;
     text-align: center;
     transition: 1s all ease-in-out;
 }
+
 .card-perfil {
-cursor: pointer;
+    cursor: pointer;
 }
