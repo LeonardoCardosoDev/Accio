@@ -251,6 +251,7 @@
 <script>
   var id = sessionStorage.ID_USUARIO;
   var fkCasa = 0;
+  var qtdUser = 0;
 
   function alterar(params) {
     if (indeceVencedora == 0) {
@@ -278,6 +279,51 @@
         idServer: id,
       }),
     });
+
+    fetch("/usuarios/buscar", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idServer: fkCasa,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!");
+
+        if (resposta.ok) {
+          console.log(resposta);
+          resposta.json().then((json) => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            sessionStorage.QTD_USER = json.qtd_user;
+            qtdUser = sessionStorage.QTD_USER;
+          });
+        } else {
+          console.log("Houve um erro!");
+        }
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+    qtdUser = qtdUser + 1;
+
+    fetch("/usuarios/atualizarQtd", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        casaServer: fkCasa,
+        quantidadeServer: qtdUser,
+      }),
+    });
+
     sessionStorage.FKCASA_USUARIO = fkCasa;
     setTimeout(function () {
       if (fkCasa == 2) {

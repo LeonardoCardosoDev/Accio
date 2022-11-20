@@ -13,6 +13,7 @@ use hogwarts;
 create table casa(
 id int primary key auto_increment,
 nome_casa varchar(50)
+qtd_user int,
 );
 
 create table frase(

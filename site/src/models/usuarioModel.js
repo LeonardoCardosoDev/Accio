@@ -10,6 +10,16 @@ function listar() {
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);
 }
+function buscar(id) {
+  console.log(
+    "ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()"
+  );
+  var instrucao = `
+        select * from casa where id = '${id}';
+    `;
+  console.log("Executando a instrução SQL: \n" + instrucao);
+  return database.executar(instrucao);
+}
 
 function entrar(email, senha) {
   console.log(
@@ -62,7 +72,13 @@ function pontuar(pontos, id) {
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);
 }
-
+function atualizarQtd(id, qtd) {
+  var instrucao = `
+        update casa set qtd_user = ${qtd} where id = ${id};
+    `;
+  console.log("Executando a instrução SQL: \n" + instrucao);
+  return database.executar(instrucao);
+}
 module.exports = {
   entrar,
   cadastrar,
@@ -70,4 +86,6 @@ module.exports = {
   alterar,
   pontuar,
   retornar,
+  buscar,
+  atualizarQtd,
 };

@@ -138,8 +138,6 @@ function pontuar(req, res) {
 function retornar(req, res) {
   // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
 
-  var id = req.body.idServer;
-
   // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
   usuarioModel
     .retornar(id)
@@ -155,7 +153,44 @@ function retornar(req, res) {
       res.status(500).json(erro.sqlMessage);
     });
 }
+function buscar(req, res) {
+  var id = req.body.idServer;
+  usuarioModel
+    .buscar(id)
+    .then(function (resultado) {
+      if (resultado.length > 0) {
+        res.status(200).json(resultado);
+      } else {
+        res.status(204).send("Nenhum resultado encontrado!");
+      }
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "Houve um erro ao realizar a consulta! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
 
+function atualizarQtd(req, res) {
+  // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+  var id = req.body.casaServer;
+  var qtd = req.body.quantidadeServer;
+
+  // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+  usuarioModel
+    .atualizarQtd(id, qtd)
+    .then(function (resultado) {
+      res.json(resultado);
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      console.log("\nHouve um erro  ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
 module.exports = {
   entrar,
   cadastrar,
@@ -164,4 +199,6 @@ module.exports = {
   alterar,
   pontuar,
   retornar,
+  buscar,
+  atualizarQtd,
 };
