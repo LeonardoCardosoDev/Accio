@@ -10,7 +10,7 @@ router.get("/", function (req, res) {
 router.get("/listar", function (req, res) {
   usuarioController.listar(req, res);
 });
-router.get("/buscar", function (req, res) {
+router.post("/buscar", function (req, res) {
   usuarioController.buscar(req, res);
 });
 

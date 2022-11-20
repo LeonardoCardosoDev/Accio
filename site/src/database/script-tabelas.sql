@@ -12,8 +12,8 @@ use hogwarts;
 
 create table casa(
 id int primary key auto_increment,
-nome_casa varchar(50)
-qtd_user int,
+nome_casa varchar(50),
+qtd_user int
 );
 
 create table frase(
@@ -34,12 +34,12 @@ foreign key (fk_frase) references frase(id),
 foreign key (fk_casa) references casa(id)
 );
 
-insert into casa(nome_casa)values
-('Descobrir'),
-('Grifinória'),
-('Sonserina'),
-('Corvinal'),
-('Lufa-lufa');
+insert into casa(nome_casa,qtd_user)values
+('Descobrir',0),
+('Grifinória',0),
+('Sonserina',0),
+('Corvinal',0),
+('Lufa-lufa',0);
 
 select * from usuario;
 

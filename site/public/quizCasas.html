@@ -279,35 +279,44 @@
         idServer: id,
       }),
     });
-
-    fetch("/usuarios/buscar", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        idServer: fkCasa,
-      }),
-    })
-      .then(function (resposta) {
-        console.log("ESTOU NO THEN DO entrar()!");
-
-        if (resposta.ok) {
-          console.log(resposta);
-          resposta.json().then((json) => {
-            console.log(json);
-            console.log(JSON.stringify(json));
-
-            sessionStorage.QTD_USER = json.qtd_user;
-            qtdUser = sessionStorage.QTD_USER;
-          });
-        } else {
-          console.log("Houve um erro!");
-        }
+    busca();
+    function busca() {
+      fetch("/usuarios/buscar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          idServer: fkCasa,
+        }),
       })
-      .catch(function (erro) {
-        console.log(erro);
-      });
+        .then(function (resposta) {
+          console.log("ESTOU NO THEN DO entrar()!");
+
+          if (resposta.ok) {
+            console.log(resposta);
+            resposta.json().then((json) => {
+              console.log(json);
+              console.log(JSON.stringify(json));
+
+              sessionStorage.QTD_USER = json.qtd_user;
+              qtdUser = sessionStorage.QTD_USER;
+
+              console.log("Resposta do Banco: " + JSON.stringify(json));
+            });
+          } else {
+            console.log("Houve um erro!");
+            resposta.text().then((texto) => {
+              console.error(texto);
+            });
+          }
+        })
+        .catch(function (erro) {
+          console.log(erro);
+        });
+
+      return false;
+    }
 
     qtdUser = qtdUser + 1;
 
