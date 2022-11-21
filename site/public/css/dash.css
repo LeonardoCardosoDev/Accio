@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&display=swap');
+nav{
+    width: 90vw;
+    height: 50px;
+  
+    justify-content: flex-end;
+}
+header{
+    height: 80px;
+    
+  
+    margin-bottom: 30px;
+    align-self: flex-start;
+    align-items: flex-start;
+}
+section{
+    height: 100vw;
+}
+
+.questao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.chart-container{
+    display: flex;
+    width: auto;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+
+    justify-content: center;
+    align-items: center;
+
+   
+}

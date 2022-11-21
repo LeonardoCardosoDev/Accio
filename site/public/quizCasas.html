@@ -279,60 +279,6 @@
         idServer: id,
       }),
     });
-    busca();
-    function busca() {
-      fetch("/usuarios/buscar", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          idServer: fkCasa,
-        }),
-      })
-        .then(function (resposta) {
-          console.log("ESTOU NO THEN DO entrar()!");
-
-          if (resposta.ok) {
-            console.log(resposta);
-            resposta.json().then((json) => {
-              console.log(json);
-              console.log(JSON.stringify(json));
-
-              sessionStorage.QTD_USER = json.qtd_user;
-              qtdUser = sessionStorage.QTD_USER;
-
-              console.log("Resposta do Banco: " + JSON.stringify(json));
-            });
-          } else {
-            console.log("Houve um erro!");
-            resposta.text().then((texto) => {
-              console.error(texto);
-            });
-          }
-        })
-        .catch(function (erro) {
-          console.log(erro);
-        });
-
-      return false;
-    }
-
-    qtdUser = qtdUser + 1;
-
-    fetch("/usuarios/atualizarQtd", {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        casaServer: fkCasa,
-        quantidadeServer: qtdUser,
-      }),
-    });
-
     sessionStorage.FKCASA_USUARIO = fkCasa;
     setTimeout(function () {
       if (fkCasa == 2) {

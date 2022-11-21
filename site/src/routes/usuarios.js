@@ -13,7 +13,15 @@ router.get("/listar", function (req, res) {
 router.post("/buscar", function (req, res) {
   usuarioController.buscar(req, res);
 });
-
+router.post("/buscar2", function (req, res) {
+  usuarioController.buscar2(req, res);
+});
+router.post("/buscar3", function (req, res) {
+  usuarioController.buscar3(req, res);
+});
+router.post("/buscar4", function (req, res) {
+  usuarioController.buscar4(req, res);
+});
 //Recebendo os dados do html e direcionando para a função cadastrar de usuarioController.js
 router.post("/cadastrar", function (req, res) {
   usuarioController.cadastrar(req, res);

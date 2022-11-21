@@ -48,6 +48,72 @@ function buscar(req, res) {
       res.status(500).json(erro.sqlMessage);
     });
 }
+function buscar2(req, res) {
+  var id = req.body.idServer;
+  usuarioModel
+    .buscar(id)
+    .then(function (resultado) {
+      if (resultado.length > 0) {
+        console.log(`\nResultados encontrados: ${resultado.length}`);
+        console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
+        res.json(resultado[0]);
+      } else {
+        res.status(204).send("Nenhum resultado encontrado!");
+      }
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "Houve um erro ao realizar a consulta! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+function buscar3(req, res) {
+  var id = req.body.idServer;
+  usuarioModel
+    .buscar(id)
+    .then(function (resultado) {
+      if (resultado.length > 0) {
+        console.log(`\nResultados encontrados: ${resultado.length}`);
+        console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
+        res.json(resultado[0]);
+      } else {
+        res.status(204).send("Nenhum resultado encontrado!");
+      }
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "Houve um erro ao realizar a consulta! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+function buscar4(req, res) {
+  var id = req.body.idServer;
+  usuarioModel
+    .buscar(id)
+    .then(function (resultado) {
+      if (resultado.length > 0) {
+        console.log(`\nResultados encontrados: ${resultado.length}`);
+        console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
+        res.json(resultado[0]);
+      } else {
+        res.status(204).send("Nenhum resultado encontrado!");
+      }
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "Houve um erro ao realizar a consulta! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
 function entrar(req, res) {
   var email = req.body.emailServer;
   var senha = req.body.senhaServer;
@@ -201,5 +267,8 @@ module.exports = {
   pontuar,
   retornar,
   buscar,
+  buscar2,
+  buscar3,
+  buscar4,
   atualizarQtd,
 };

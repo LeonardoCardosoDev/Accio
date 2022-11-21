@@ -10,19 +10,229 @@
     <link rel="shortcut icon" href="assets/img_stars.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/perfil.css" />
     <link rel="stylesheet" href="css/quizCasas.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dash.css" />
     <script
       src="https://kit.fontawesome.com/9f7414eb10.js"
       crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/funcoesGrafi.js"></script>
   </head>
   <body>
     <div class="main"></div>
 
-    <section class="section-cont">
+    <section class="section-cont" style="flex-direction: column">
+      <header>
+        <nav>
+          <div class="custom-btn btn" onclick="voltarPerfil()">
+            <h2><a href="#">Perfil</a></h2>
+          </div>
+        </nav>
+      </header>
       <div class="questao">
-        <canvas id="myChart"></canvas>
+        <div
+          class="chart-container"
+          style="position: relative; height: 54vh; width: 60vw">
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
     </section>
   </body>
 </html>
-<script></script>
+<script>
+  var grifi = 2;
+  var sonse = 3;
+  var corvi = 4;
+  var lufa = 5;
+  var qtdGri = 0;
+  var qtdSon = 0;
+  var qtdCorv = 0;
+  fetch("/usuarios/buscar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      idServer: grifi,
+    }),
+  })
+    .then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!");
+
+      if (resposta.ok) {
+        console.log(resposta);
+        resposta.json().then((json) => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+
+          sessionStorage.QTD_USER_GRI = json.qtd;
+
+          console.log(sessionStorage.QTD_USER_GRI);
+          qtdGri = sessionStorage.QTD_USER_GRI;
+        });
+      } else {
+        console.log("Houve um erro!");
+        resposta.text().then((texto) => {
+          console.error(texto);
+        });
+      }
+    })
+    .catch(function (erro) {
+      console.log(erro);
+    });
+
+  fetch("/usuarios/buscar2", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      idServer: sonse,
+    }),
+  })
+    .then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!");
+
+      if (resposta.ok) {
+        console.log(resposta);
+        resposta.json().then((json) => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+
+          sessionStorage.QTD_USER_SON = json.qtd;
+
+          console.log(sessionStorage.QTD_USER_SON);
+          qtdSon = sessionStorage.QTD_USER_SON;
+        });
+      } else {
+        console.log("Houve um erro!");
+        resposta.text().then((texto) => {
+          console.error(texto);
+        });
+      }
+    })
+    .catch(function (erro) {
+      console.log(erro);
+    });
+
+  fetch("/usuarios/buscar3", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      idServer: corvi,
+    }),
+  })
+    .then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!");
+
+      if (resposta.ok) {
+        console.log(resposta);
+        resposta.json().then((json) => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+
+          sessionStorage.QTD_USER_CORV = json.qtd;
+
+          console.log(sessionStorage.QTD_USER_CORV);
+          qtdCorv = sessionStorage.QTD_USER_CORV;
+        });
+      } else {
+        console.log("Houve um erro!");
+        resposta.text().then((texto) => {
+          console.error(texto);
+        });
+      }
+    })
+    .catch(function (erro) {
+      console.log(erro);
+    });
+
+  fetch("/usuarios/buscar4", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      idServer: lufa,
+    }),
+  })
+    .then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!");
+
+      if (resposta.ok) {
+        console.log(resposta);
+        resposta.json().then((json) => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+
+          sessionStorage.QTD_USER_LUFA = json.qtd;
+          qtdLuf = sessionStorage.QTD_USER_LUFA;
+          console.log(sessionStorage.QTD_USER_LUFA);
+          chamarGrafico();
+        });
+      } else {
+        console.log("Houve um erro!");
+        resposta.text().then((texto) => {
+          console.error(texto);
+        });
+      }
+    })
+    .catch(function (erro) {
+      console.log(erro);
+    });
+
+  function chamarGrafico() {
+    console.log(
+      "Grifinoria:" +
+        qtdGri +
+        "Sonserina:" +
+        qtdSon +
+        "Corvinal:" +
+        qtdCorv +
+        "Lufa-Lufa:" +
+        qtdLuf
+    );
+    const ctx = document.getElementById("myChart");
+    Chart.defaults.color = "#fff";
+
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Grifinória", "Sonserina", "Corvinal", "Lufa-Lufa"],
+        font: {
+          size: 50,
+        },
+        datasets: [
+          {
+            label: "Quantidade de Usuarios em cada Casa",
+            data: [qtdGri, qtdSon, qtdCorv, qtdLuf],
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 205, 86, 0.2)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132)",
+              "rgba(75, 192, 192)",
+              "rgba(54, 162, 235)",
+              "rgba(255, 205, 86)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  }
+</script>
