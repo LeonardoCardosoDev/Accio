@@ -38,6 +38,24 @@
         </div>
       </div>
     </section>
+    <section class="section-cont">
+      <div class="questao quest">
+        <div class="cards" id="maior">
+          <h1>Casa com Mair Quantidade de Usuários</h1>
+          <br />
+          <h2 id="maior_qtd"></h2>
+          <br />
+          <h2 id="numMa"></h2>
+        </div>
+        <div class="cards" id="menor">
+          <h1>Casa com Menor Quantidade de Usuários</h1>
+          <br />
+          <h2 id="menor_qtd"></h2>
+          <br />
+          <h2 id="numMe"></h2>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
 <script>
@@ -48,6 +66,7 @@
   var qtdGri = 0;
   var qtdSon = 0;
   var qtdCorv = 0;
+  var qtdLuf = 0;
   fetch("/usuarios/buscar", {
     method: "POST",
     headers: {
@@ -174,6 +193,7 @@
 
           setTimeout(function () {
             chamarGrafico();
+            metricas();
           }, 1500);
         });
       } else {
@@ -210,7 +230,7 @@
         },
         datasets: [
           {
-            label: "Quantidade de Usuarios em cada Casa",
+            label: "Quantidade de Usuários em Cada Casa",
             data: [qtdGri, qtdSon, qtdCorv, qtdLuf],
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
@@ -237,5 +257,91 @@
         },
       },
     });
+  }
+  vt_casas = [];
+  var indeceMaior = 0;
+  var casaMaior = 0;
+  var indeceMenor = 0;
+  var casaMenor = 0;
+  function metricas(params) {
+    for (let index = 0; index < 4; index++) {
+      if (index == 0) {
+        vt_casas.push(Number(qtdGri));
+      }
+      if (index == 1) {
+        vt_casas.push(Number(qtdSon));
+      }
+      if (index == 2) {
+        vt_casas.push(Number(qtdCorv));
+      }
+      if (index == 3) {
+        vt_casas.push(Number(qtdLuf));
+      }
+    }
+    casaMaior = Math.max.apply(null, vt_casas);
+    casaMenor = Math.min.apply(null, vt_casas);
+    console.log(casaMaior);
+
+    indeceMaior = vt_casas.indexOf(casaMaior);
+    indeceMenor = vt_casas.indexOf(casaMenor);
+    console.log(indeceMaior);
+
+    if (indeceMaior == 0) {
+      maior_qtd.innerHTML = "Grifinoria";
+      numMa.innerHTML = qtdGri;
+
+      maior.style.backgroundColor = "rgba(255, 99, 132, 0.2)";
+      maior.style.borderColor = "rgba(255, 99, 132)";
+    }
+    if (indeceMaior == 1) {
+      maior_qtd.innerHTML = "Sonserina";
+      numMa.innerHTML = qtdSon;
+
+      maior.style.backgroundColor = "rgba(75, 192, 192, 0.2)";
+      maior.style.borderColor = "rgba(75, 192, 192)";
+    }
+    if (indeceMaior == 2) {
+      maior_qtd.innerHTML = "Corvinal";
+      numMa.innerHTML = qtdCorv;
+
+      maior.style.backgroundColor = "rgba(54, 162, 235, 0.2)";
+      maior.style.borderColor = "rgba(54, 162, 235)";
+    }
+    if (indeceMaior == 3) {
+      maior_qtd.innerHTML = "Lufa-Lufa";
+      numMa.innerHTML = qtdLuf;
+
+      maior.style.backgroundColor = "rgba(255, 205, 86, 0.2)";
+      maior.style.borderColor = "rgba(255, 205, 86)";
+    }
+
+    if (indeceMenor == 0) {
+      menor_qtd.innerHTML = "Grifinoria";
+      numMe.innerHTML = qtdGri;
+
+      menor.style.backgroundColor = "rgba(255, 99, 132, 0.2)";
+      menor.style.borderColor = "rgba(255, 99, 132)";
+    }
+    if (indeceMenor == 1) {
+      menor_qtd.innerHTML = "Sonserina";
+      numMe.innerHTML = qtdSon;
+
+      menor.style.backgroundColor = "rgba(75, 192, 192, 0.2)";
+      menor.style.borderColor = "rgba(75, 192, 192)";
+    }
+    if (indeceMenor == 2) {
+      menor_qtd.innerHTML = "Corvinal";
+      numMe.innerHTML = qtdCorv;
+
+      menor.style.backgroundColor = "rgba(54, 162, 235, 0.2)";
+      menor.style.borderColor = "rgba(54, 162, 235)";
+    }
+    if (indeceMenor == 3) {
+      menor_qtd.innerHTML = "Lufa-Lufa";
+      numMe.innerHTML = qtdLuf;
+
+      menor.style.backgroundColor = "rgba(255, 205, 86, 0.2)";
+      menor.style.borderColor = "rgba(255, 205, 86)";
+    }
   }
 </script>
