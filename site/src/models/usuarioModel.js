@@ -88,6 +88,15 @@ function cadastrar(nome, sobrenome, email, senha) {
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);
 }
+function inserirfrase(frase, id) {
+  // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+  //  e na ordem de inserção dos dados.
+  var instrucao = `
+        INSERT INTO frase (fk_user,frase_user) VALUES ('${id}','${frase}');
+    `;
+  console.log("Executando a instrução SQL: \n" + instrucao);
+  return database.executar(instrucao);
+}
 function alterar(casa, id) {
   var instrucao = `
         update usuario set fk_casa = ${casa} where id = ${id};
@@ -121,4 +130,5 @@ module.exports = {
   buscar3,
   buscar4,
   atualizarQtd,
+  inserirfrase,
 };

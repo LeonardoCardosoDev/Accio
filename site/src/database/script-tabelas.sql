@@ -18,6 +18,8 @@ qtd_user int
 
 create table frase(
 id int primary key auto_increment,
+fk_user int,
+foreign key (fk_user) references usuario(id),
 frase_user varchar(50)
 );
 
@@ -29,8 +31,6 @@ email varchar(50),
 senha varchar(50),
 ponto int,
 fk_casa int,
-fk_frase int,
-foreign key (fk_frase) references frase(id),
 foreign key (fk_casa) references casa(id)
 );
 

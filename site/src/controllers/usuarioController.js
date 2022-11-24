@@ -180,6 +180,21 @@ function cadastrar(req, res) {
       });
   }
 }
+function inserirfrase(req, res) {
+  var frase = req.body.fraseServer;
+  var id = req.body.idServer;
+
+  usuarioModel
+    .inserirfrase(frase, id)
+    .then(function (resultado) {
+      res.json(resultado);
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      console.log("\nHouve um erro! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
 
 function alterar(req, res) {
   // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
@@ -271,4 +286,5 @@ module.exports = {
   buscar3,
   buscar4,
   atualizarQtd,
+  inserirfrase,
 };

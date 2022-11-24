@@ -75,10 +75,12 @@
             Sim, o próprio Merlin, o mago mais famoso da história! Ele aprendeu
             tudo o que sabia nesta mesma casa!.
           </div>
-          <div class="text-2">Digite uma frase para seu perfil</div>
-          <div class="label-float">
+          <div class="text-2" id="div_frase1">
+            Digite uma frase para seu perfil
+          </div>
+          <div class="label-float" id="div_frase2">
             <input id="frase_input" type="text" placeholder="" required />
-            <div class="button" onclick="registrar()"><h4>Confirmar</h4></div>
+            <div class="button" onclick="inserir()"><h4>Confirmar</h4></div>
           </div>
         </div>
       </div>
@@ -91,11 +93,37 @@
 
   var pontos = sessionStorage.PONTO_USUARIO;
   var fk_frase = sessionStorage.FKFRASE_USUARIO;
+  var idVar = sessionStorage.ID_USUARIO;
 
   if (pontos == "null") {
     img_ponto.style.display = "flex";
   } else {
     img_ponto.style.display = "none";
     ponto.innerHTML = sessionStorage.PONTO_USUARIO;
+  }
+
+  function inserir() {
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var fraseVar = frase_input.value;
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/inserirfrase", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        fraseServer: fraseVar,
+        idServer: idVar,
+      }),
+    });
+
+    setTimeout(function () {
+      div_frase1.style.display = "none";
+      div_frase2.style.display = "none";
+    }, 1000);
   }
 </script>
