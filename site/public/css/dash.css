@@ -48,6 +48,10 @@ section{
     width: 65vw;
     background-color: transparent;
 }
+.quest2{
+    width: 70vw;
+    height: 60vh;
+}
 .chart-container{
     display: flex;
     width: auto;

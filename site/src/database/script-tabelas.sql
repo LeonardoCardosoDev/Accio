@@ -12,16 +12,10 @@ use hogwarts;
 
 create table casa(
 id int primary key auto_increment,
-nome_casa varchar(50),
-qtd_user int
+nome_casa varchar(50)
 );
 
-create table frase(
-id int primary key auto_increment,
-fk_user int,
-foreign key (fk_user) references usuario(id),
-frase_user varchar(50)
-);
+
 
 create table usuario(
 id int primary key auto_increment,
@@ -34,14 +28,31 @@ fk_casa int,
 foreign key (fk_casa) references casa(id)
 );
 
-insert into casa(nome_casa,qtd_user)values
-('Descobrir',0),
-('Grifinória',0),
-('Sonserina',0),
-('Corvinal',0),
-('Lufa-lufa',0);
+create table frase(
+id int primary key auto_increment,
+fk_user int,
+foreign key (fk_user) references usuario(id),
+frase_user varchar(50)
+);
+
+insert into casa(nome_casa)values
+('Descobrir'),
+('Grifinória'),
+('Sonserina'),
+('Corvinal'),
+('Lufa-lufa');
 
 select * from usuario;
+select * from frase;
+insert into usuario (fk_casa)values
+(3),
+(3),
+(3),
+(2),
+(2),
+(2),
+(4),
+(5);
 
 /*
 comandos para criar usuário em banco de dados azure, sqlserver,

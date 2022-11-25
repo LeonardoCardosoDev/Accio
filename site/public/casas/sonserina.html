@@ -61,6 +61,7 @@
       <div class="cont-perfil">
         <div class="card-inte card1">
           <div class="title-frase" id="frase">
+            <h4 id="title_fraseUnd">ambição | determinação | astúcia</h4>
             <h4 id="title_frase"></h4>
           </div>
           <div class="title-casa">Sonserina</div>
@@ -150,13 +151,15 @@
               sessionStorage.FRASE = json.frase_user;
               console.log(sessionStorage.FRASE);
               if (sessionStorage.FRASE == "undefined") {
-                title_frase.innerHTML = "ambição | determinação | astúcia";
+                console.log('Ainda não tem frase')
               } else {
+                title_fraseUnd.style.display = "none";
                 title_frase.innerHTML = sessionStorage.FRASE;
                 div_frase1.style.display = "none";
                 div_frase2.style.display = "none";
+                
               }
-            }, 100); // apenas para exibir o loading
+            }, 10); // apenas para exibir o loading
           });
         } else {
           console.log("Houve um erro ao tentar realizar o login!");
