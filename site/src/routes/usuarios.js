@@ -30,6 +30,10 @@ router.post("/cadastrar", function (req, res) {
 router.post("/inserirfrase", function (req, res) {
   usuarioController.inserirfrase(req, res);
 });
+
+router.post("/pesquisaFrase", function (req, res) {
+  usuarioController.pesquisaFrase(req, res);
+});
 router.post("/autenticar", function (req, res) {
   usuarioController.entrar(req, res);
 });

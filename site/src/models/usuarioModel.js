@@ -97,6 +97,15 @@ function inserirfrase(frase, id) {
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);
 }
+function pesquisaFrase(id) {
+  // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+  //  e na ordem de inserção dos dados.
+  var instrucao = `
+        select * from frase where fk_user = ${id}
+    `;
+  console.log("Executando a instrução SQL: \n" + instrucao);
+  return database.executar(instrucao);
+}
 function alterar(casa, id) {
   var instrucao = `
         update usuario set fk_casa = ${casa} where id = ${id};
@@ -131,4 +140,5 @@ module.exports = {
   buscar4,
   atualizarQtd,
   inserirfrase,
+  pesquisaFrase,
 };

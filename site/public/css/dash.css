@@ -46,6 +46,7 @@ section{
    
     flex-direction: row;
     width: 65vw;
+    background-color: transparent;
 }
 .chart-container{
     display: flex;

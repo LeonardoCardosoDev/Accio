@@ -114,6 +114,20 @@ function buscar4(req, res) {
       res.status(500).json(erro.sqlMessage);
     });
 }
+function pesquisaFrase(req, res) {
+  var id = req.body.idServer;
+
+  usuarioModel
+    .pesquisaFrase(id)
+    .then(function (resultado) {
+      res.json(resultado[0]);
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      console.log("\nHouve um erro! Erro: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+}
 function entrar(req, res) {
   var email = req.body.emailServer;
   var senha = req.body.senhaServer;
@@ -287,4 +301,5 @@ module.exports = {
   buscar4,
   atualizarQtd,
   inserirfrase,
+  pesquisaFrase,
 };

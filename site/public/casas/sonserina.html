@@ -61,7 +61,7 @@
       <div class="cont-perfil">
         <div class="card-inte card1">
           <div class="title-frase" id="frase">
-            <h4>ambição | determinação | astúcia</h4>
+            <h4 id="title_frase"></h4>
           </div>
           <div class="title-casa">Sonserina</div>
           <div class="text">
@@ -92,7 +92,6 @@
   c_usuario.innerHTML = sessionStorage.SOBRENOME_USUARIO;
 
   var pontos = sessionStorage.PONTO_USUARIO;
-  var fk_frase = sessionStorage.FKFRASE_USUARIO;
   var idVar = sessionStorage.ID_USUARIO;
 
   if (pontos == "null") {
@@ -125,5 +124,48 @@
       div_frase1.style.display = "none";
       div_frase2.style.display = "none";
     }, 1000);
+  }
+  mostrar();
+  function mostrar(params) {
+    fetch("/usuarios/pesquisaFrase", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: idVar,
+      }),
+    })
+      .then(function (resposta) {
+        if (resposta.ok) {
+          console.log(resposta);
+
+          resposta.json().then((json) => {
+            console.log(json);
+            console.log("Resposta" + JSON.stringify(json));
+
+            setTimeout(function () {
+              sessionStorage.FRASE = json.frase_user;
+              console.log(sessionStorage.FRASE);
+              if (sessionStorage.FRASE == "undefined") {
+                title_frase.innerHTML = "ambição | determinação | astúcia";
+              } else {
+                title_frase.innerHTML = sessionStorage.FRASE;
+                div_frase1.style.display = "none";
+                div_frase2.style.display = "none";
+              }
+            }, 100); // apenas para exibir o loading
+          });
+        } else {
+          console.log("Houve um erro ao tentar realizar o login!");
+        }
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+    return false;
   }
 </script>
