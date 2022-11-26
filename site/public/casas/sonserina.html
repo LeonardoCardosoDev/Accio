@@ -81,7 +81,7 @@
           </div>
           <div class="label-float" id="div_frase2">
             <input id="frase_input" type="text" placeholder="" required />
-            <div class="button" onclick="inserir()"><h4>Confirmar</h4></div>
+            <div class="button" onclick="validar()"><h4>Confirmar</h4></div>
           </div>
         </div>
       </div>
@@ -101,7 +101,12 @@
     img_ponto.style.display = "none";
     ponto.innerHTML = sessionStorage.PONTO_USUARIO;
   }
-
+  function validar(params) {
+    if (frase_input.value == "") {
+    } else {
+      inserir();
+    }
+  }
   function inserir() {
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
@@ -124,7 +129,7 @@
     setTimeout(function () {
       div_frase1.style.display = "none";
       div_frase2.style.display = "none";
-    }, 1000);
+    }, 10);
   }
   mostrar();
   function mostrar(params) {
@@ -151,13 +156,12 @@
               sessionStorage.FRASE = json.frase_user;
               console.log(sessionStorage.FRASE);
               if (sessionStorage.FRASE == "undefined") {
-                console.log('Ainda não tem frase')
+                console.log("Ainda não tem frase");
               } else {
                 title_fraseUnd.style.display = "none";
                 title_frase.innerHTML = sessionStorage.FRASE;
                 div_frase1.style.display = "none";
                 div_frase2.style.display = "none";
-                
               }
             }, 10); // apenas para exibir o loading
           });
