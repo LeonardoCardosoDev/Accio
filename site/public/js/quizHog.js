@@ -63,7 +63,7 @@ function next6(params) {
   console.log(somaAcerto);
   console.log(vt_acertos);
 
-  pontuacao_div.innerHTML = `${somaAcerto}`;
+  pontuacao_div.innerHTML = `${somaAcerto}/100`;
 
   cont6.style.display = "none";
   cont7.style.display = "flex";

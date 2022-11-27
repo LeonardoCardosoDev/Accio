@@ -32,7 +32,7 @@ create table frase(
 id int primary key auto_increment,
 fk_user int,
 foreign key (fk_user) references usuario(id),
-frase_user varchar(50)
+frase_user varchar(100)
 );
 
 insert into casa(nome_casa)values
