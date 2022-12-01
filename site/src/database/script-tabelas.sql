@@ -48,11 +48,17 @@ insert into usuario (fk_casa)values
 (3),
 (3),
 (3),
-(2),
-(2),
-(2),
 (4),
-(5);
+(4),
+(4),
+(4),
+(4),
+(4),
+(5),
+(5),
+(5),
+(5),
+(2),
 
 /*
 comandos para criar usuário em banco de dados azure, sqlserver,
